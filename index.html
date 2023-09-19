@@ -10,49 +10,68 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <div class="flower photo">
-                <img src="flowers.jpg" alt="Pink flowers" id="pink-flowers">
-            </div>
             <div class="odin-logo">
                 <img src="odin_logo.png" alt="odin-logo" id="odin-logo">
                 <h1>Sign-Up Form</h1>
             </div>
+            <div class="photo-credit">Photo by xyz</div>
         </div>
-        <div class="heading" id="heading-1">This is not a real online service! You know you need this in your life, though. 
-        It has your deepest dreams and happiest memories. Sign up <em>now </em>to get started.</div>
-        <div class="heading" id="heading-2">Let's do this, baby.</div>
-        <div class="heading" id="form-heading"></div>
-    
 
-        <form>
-            <div class="row1">
-                <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" placeholder="First Name" name="first-name">
+        <div class="form-section">
+            <div class="heading">
+                <p>
+                    This is not a real online service! You know you need this in your life, though. 
+                    It has your deepest dreams and happiest memories. Sign up <em>now </em>to get started.
+                </p>
+                <p>You <em>know </em>you want to.</p>
             </div>
-
-            <div class="row2">
-                <label for="last-name">Last Name:</label>
-                <input type="text" id="last-name" placeholder="Last Name" name="last-name">
-            </div>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="sallysmith@gmail.com" name="email"
-            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
         
-            <label for="phone-number">Phone Number:</label>
-            <input type="tel" id="phone-number" placeholder="Phone Number" name="phone-number" 
-            minlength="10" maxlength="10">
+            <div class="middle-form">
+                <h2>Let's do this, <em>baby</em>.</h2>
 
-            <label for="password-1">Password:</label>
-            <input type="password" id="password-1" placeholder="Password" name="password">
-
-            <label for="password-confirm">Confirm Password:</label>
-            <input type="password" id="password-confirm" placeholder="Confirm Password" name="confirm-password">
+                <form action="#" id="form">
+                    <div class="row1">
+                        <section class="info">
+                            <label for="first-name">First Name:</label>
+                            <input type="text" id="first-name" placeholder="First Name" name="first-name">
+                        </section>
+                        <section>
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" id="last-name" placeholder="Last Name" name="last-name">
+                        </section>
+                    </div>
+                    <div class="row2">
+                        <section class="info">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" placeholder="sallysmith@gmail.com" name="email"
+                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                        </section>
+                        <section>
+                            <label for="phone-number">Phone Number:</label>
+                            <input type="tel" id="phone-number" placeholder="Phone Number" name="phone-number" 
+                            minlength="10" maxlength="10">
+                        </section>
+                    </div>
+                    <div class="row3">
+                        <section class="info">
+                            <label for="password-1">Password:</label>
+                            <input type="password" id="password-1" placeholder="Password" name="password">
+                        </section>
+                        <section>
+                            <label for="password-confirm">Confirm Password:</label>
+                            <input type="password" id="password-confirm" placeholder="Confirm Password" name="confirm-password">
+                        </section>
+                    </div>
+                </form>
+                <div id="passwordError">
+                </div>
+            </div>  
+            <div class="end-form">
+                <p class="account">Already have an account? 
+                    Log in</p>
+                <button class="footer"  type="submit">Create Account</button>
             </div>
-            <button class="footer"  type="submit">Create Account</button>
-        </form>
-
-        <footer class="footer">Already have an account? Log in</footer>
+        </div>
     </div>
 </body>
 </html>

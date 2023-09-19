@@ -42,47 +42,84 @@ table {
 	border-spacing: 0;
 }
 
+
+:root {
+
+}
+
 #pink-flowers {
-    width: 50%;    
+	height: 700px;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif;
     font-size: 2rem;
-    display: block;
-    box-sizing: border-box;
-    display: flex;
-	flex-direction: column;
-	flex-flow: row wrap;
+	box-sizing: border-box;
 }
-
-.heading {
- padding: 5px;
-}
-
-.signup {
+.container {
     display: flex;
 }
 
-form {
-	/* display: flex;
+.sidebar {
+	display: flex;
 	flex-direction: column;
-	justify-content: right; */
-
-	display: block;
+	background-image: url("flowers.jpg");
+    justify-content: space-between;
+    align-items: center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 703px;
+    flex: 1;
+	width: 500px;
 }
 
 .odin-logo {
 	background-color: black;
-	.logo {
-		width: 200px; 
-		height: auto; 
-		transform: scale(0.75);
-	}
+	display: flex;
+    width: 100%;
+    background-color: #1d1d1d;
+    opacity: 65%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+	width: 400px;
+}
+
+img {
+	width: 150px;
+	height: 150px;
 }
 
 h1 {
 	color: white;
+}
+
+.form-section {
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.heading {
+	margin: 25px;
+}
+
+.heading > p {
+	padding: 10px;
+}
+
+.middle-form {
+	display: flex;
+	flex-direction: column;
+	margin: 25px;
+}
+
+.end-form {
+	/* display: flex;
+	flex-direction: column; */
+	margin: 25px;
 }
 
 
