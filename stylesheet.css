@@ -46,11 +46,6 @@ table {
     width: 50%;    
 }
 
-@font-face {
-    font-family: 'Raleway';
-    src: url('https://fonts.googleapis.com');
-}
-
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 2rem;
@@ -75,6 +70,19 @@ form {
 	justify-content: right; */
 
 	display: block;
+}
+
+.odin-logo {
+	background-color: black;
+	.logo {
+		width: 200px; 
+		height: auto; 
+		transform: scale(0.75);
+	}
+}
+
+h1 {
+	color: white;
 }
 
 
