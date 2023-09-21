@@ -43,8 +43,18 @@ table {
 }
 
 
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 :root {
-
+--whitesmoke:#F5F5F5;
+--lightpink: #F8C8DC;
+--lightgreen: #90EE90;
 }
 
 body {
@@ -52,9 +62,11 @@ body {
     font-size: 1.5rem;
 	box-sizing: border-box;
 	min-height: 100vh;
+	width: 100%;
 }
 .container {
     display: flex;
+	width: 100%;
 }
 
 .sidebar {
@@ -64,12 +76,12 @@ body {
     justify-content: space-between;
     align-items: center;
     background-size: cover;
-	background-repeat: no-repeat; 
-    background-position: center; 
     height: 100vh;
-    min-height: 703px;
-    flex: 1;
-	width: 500px;
+	flex-grow: 1;
+    position: relative;
+    width: 60vw;
+    min-width: 250px;
+    color: white;
 }
 
 .odin-logo {
@@ -80,10 +92,10 @@ body {
     opacity: 65%;
     justify-content: center;
     align-items: center;
-    margin-top: 25%;
+    margin-top: 25px;
     padding: 10px;
     box-sizing: border-box;
-	width: 400px;
+	min-width: 250px;
 }
 
 img {
@@ -98,24 +110,28 @@ h1 {
 .form-section {
 	display: flex;
 	flex-direction: column;
-	margin: 0px;
-	padding: 0px;
-	justify-content: space-between;
+	background-color: var(--whitesmoke);
 }
 
 .heading {
 	background: whitesmoke;
-	height: 300px;
+	flex: 1;
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+	margin-bottom: 5vh;
 }
 
 .heading > p {
-	padding: 10px;
+	padding: 15px;
 }
 
 .middle-form {
+	background: white;	
 	display: flex;
 	flex-direction: column;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	flex: 1;
+	
 }
 
 .row1,
@@ -124,17 +140,85 @@ h1 {
 	display: flex;
 	padding: 10px;
 	flex-direction: row;
+	justify-content: flex-start;
+}
+section {
+	padding-right: 5vw;
+}
+
+/* section[data-error]::after {
+	border-color: red;
+	color: red;
+	background: #fffafa;
+	content: attr(data-error);
+} */
+
+.info label {
+	display: block;
+	margin: 5px;
+}
+
+.info input {
+	border-radius: 3px;
+	border: 1px solid grey;
+	height: 3vh;
+	width: 20vw;
+
+}
+
+input:focus {
+	border: 3px solid #555;
+	outline: none;
+	background-color: var(--lightgreen);
+
 }
 
 h2 {
-	margin-bottom: 25px;
 	padding: 10px;
+	margin-bottom: 5vh;
 }
 
 .end-form {
-	background: whitesmoke;
-	margin: 0px;
-	padding: 10px;
-	height: 200px;
+	background: var(--whitesmoke);
+	padding: 3vh 0vh 15vh 0vh;  
+	margin: 10px;
+
+	
 }
 
+[placeholder] {
+background-color: var(--lightpink);
+}
+
+button {
+	border-radius: 25px;
+	background-color: var(--lightpink);
+	border: 2px solid grey;
+	padding: 12px;
+	font-size: 20px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+	background: var(--lightgreen);
+}
+
+div > p {
+	margin-top: 20px;
+}
+
+div > p > strong {
+	text-decoration: underline;
+}
+
+div > p > strong:hover {
+	color: var(--lightgreen);
+	text-decoration:underline;
+}
+
+.account {
+	font-size: 1rem;
+}
