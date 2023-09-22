@@ -131,6 +131,8 @@ h1 {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
+	padding: 5px 0px 10px 5px;; 
+	
 	
 }
 
@@ -156,6 +158,7 @@ section {
 .info label {
 	display: block;
 	margin: 5px;
+	font-size: 20px;
 }
 
 .info input {
@@ -175,7 +178,8 @@ input:focus {
 
 h2 {
 	padding: 10px;
-	margin-bottom: 5vh;
+	/* margin-bottom: 5vh; */
+	margin-top: 8px;
 }
 
 .end-form {
@@ -221,4 +225,28 @@ div > p > strong:hover {
 
 .account {
 	font-size: 1rem;
+}
+
+.photo-credit {
+	font-size: 10px;
+}
+
+#passwordError.error::after {
+		color: var(--lightpink);
+		content: "*Passwords do not match";
+		position: absolute;
+		margin-top: 5px;
+		font-size: .5em;
+		color: #ff0000;
+}
+
+input[type="password"].error{
+    border-color: red;
+}
+
+#email-error {
+	color: #ff0000;
+	font-size: .5em;
+	position: absolute;
+	margin-top: 5px;
 }

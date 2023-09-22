@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400&display=swap" rel="stylesheet">    <script src="Signup-Form.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400&display=swap" rel="stylesheet">    
+    <script src="Signup-Form.js" defer></script>
     <title>Sign-up Form</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
                 <img src="odin_logo.png" alt="odin-logo" id="odin-logo">
                 <h1>Sign-Up Form</h1>
             </div>
-            <div class="photo-credit">Photo by xyz</div>
+            <div class="photo-credit">Photo by J Lee</div>
         </div>
 
         <div class="form-section">
@@ -33,38 +34,39 @@
                     <div class="row1">
                         <section class="info">
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" placeholder="First Name" name="first-name">
+                            <input type="text" id="first-name" placeholder="First Name" name="first-name" required>
                         </section>
                         <section class="info">
                             <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" placeholder="Last Name" name="last-name">
+                            <input type="text" id="last-name" placeholder="Last Name" name="last-name" required>
                         </section>
                     </div>
                     <div class="row2">
                         <section class="info">
                             <label for="email">Email</label>
                             <input type="email" id="email" placeholder="sallysmith@gmail.com" name="email"
-                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                            <div id="email-error"></div>
                         </section>
+                        <div class="emailError"></div>
                         <section class="info">
                             <label for="phone-number">Phone Number</label>
                             <input type="tel" id="phone-number" placeholder="Phone Number" name="phone-number" 
-                            minlength="10" maxlength="10">
+                            pattern="[0-9]*" minlength="10" maxlength="10" required>
                         </section>
                     </div>
                     <div class="row3">
                         <section class="info" data-error="Passwords do not match.">
                             <label for="password-1">Password</label>
-                            <input type="password" id="password-1" placeholder="Password" name="password">
+                            <input type="password" id="password-1" placeholder="Password" name="password" required>
                         </section>
                         <section class="info">
                             <label for="password-confirm">Confirm Password</label>
-                            <input type="password" id="password-confirm" placeholder="Confirm Password" name="confirm-password">
+                            <input type="password" id="password-confirm" placeholder="Confirm Password" name="confirm-password" required>
+                            <div id="passwordError"></div>
                         </section>
                     </div>
                 </form>
-                <div id="passwordError">
-                </div>
             </div>  
             <div class="end-form">
                 <button class="footer"  type="submit">Create Account</button>
